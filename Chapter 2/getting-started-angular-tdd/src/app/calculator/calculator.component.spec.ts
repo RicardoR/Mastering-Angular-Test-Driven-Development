@@ -5,15 +5,18 @@ import { CalculatorComponent } from './calculator.component';
 describe('CalculatorComponent', () => {
   let calculator: CalculatorComponent;
   let fixture: ComponentFixture<CalculatorComponent>;
+  let calculatorService: CalculatorService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CalculatorComponent ]
+      declarations: [ CalculatorComponent ],
+      providers: [ CalculatorService ],
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(CalculatorComponent);
     calculator = fixture.componentInstance;
+    calculatorService = TestBed.inject(CalculatorService);
     fixture.detectChanges();
   });
 

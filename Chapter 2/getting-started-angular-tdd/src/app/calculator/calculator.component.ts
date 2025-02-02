@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.scss'],
 })
 export class CalculatorComponent implements OnInit {
+  result!: number;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.result = 0;
+  }
 
   add(a: number, b: number): number {
     return a + b;

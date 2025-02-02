@@ -25,4 +25,9 @@ describe('CalculatorComponent', () => {
     const result = calculator.add(2, 3);
     expect(result).toBe(5);
   });
+
+  it('should initialize result to 0', () => {
+    calculator.ngOnInit();
+    expect(calculator.result).toBe(0);
+  });
 });

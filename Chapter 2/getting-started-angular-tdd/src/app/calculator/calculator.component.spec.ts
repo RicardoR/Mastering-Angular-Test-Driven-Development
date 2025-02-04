@@ -55,6 +55,6 @@ describe('CalculatorComponent', () => {
     spyOn(calculatorService, 'divide').and.callThrough();
     calculator.divide(3,2);
     expect(calculatorService.divide).toHaveBeenCalledWith(3,2);
-    expect(calculator.result).toBe(6);
+    expect(calculator.result).toBe(1.5);
   });
 });

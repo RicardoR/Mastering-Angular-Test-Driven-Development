@@ -25,4 +25,8 @@ export class CalculatorComponent implements OnInit {
   multiply(a: number, b: number): void {
     this.result = this.calculatorService.multiply(a, b);
   }
+
+  divide(a: number, b: number): void {
+    this.result = this.calculatorService.divide(a, b);
+  }
 }

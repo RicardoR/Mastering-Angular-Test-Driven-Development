@@ -43,4 +43,11 @@ describe('CalculatorComponent', () => {
     expect(calculatorService.subtract).toHaveBeenCalledWith(3,2);
     expect(calculator.result).toBe(1);
   });
+
+  it('should multiply two numbers correctly', () => {
+    spyOn(calculatorService, 'multiply').and.callThrough();
+    calculator.multiply(3,2);
+    expect(calculatorService.multiply).toHaveBeenCalledWith(3,2);
+    expect(calculator.result).toBe(6);
+  });
 });

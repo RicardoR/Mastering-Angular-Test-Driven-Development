@@ -36,4 +36,11 @@ describe('CalculatorComponent', () => {
     expect(calculatorService.add).toHaveBeenCalledWith(2,3);
     expect(calculator.result).toBe(5);
   });
+
+  it('should subtract two numbers correctly', () => {
+    spyOn(calculatorService, 'subtract').and.callThrough();
+    calculator.subtract(3,2);
+    expect(calculatorService.subtract).toHaveBeenCalledWith(3,2);
+    expect(calculator.result).toBe(1);
+  });
 });

@@ -50,4 +50,11 @@ describe('CalculatorComponent', () => {
     expect(calculatorService.multiply).toHaveBeenCalledWith(3,2);
     expect(calculator.result).toBe(6);
   });
+
+  it('should divide two numbers correctly', () => {
+    spyOn(calculatorService, 'divide').and.callThrough();
+    calculator.divide(3,2);
+    expect(calculatorService.divide).toHaveBeenCalledWith(3,2);
+    expect(calculator.result).toBe(6);
+  });
 });

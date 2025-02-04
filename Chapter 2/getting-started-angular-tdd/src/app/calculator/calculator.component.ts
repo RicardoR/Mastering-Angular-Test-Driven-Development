@@ -21,4 +21,8 @@ export class CalculatorComponent implements OnInit {
   subtract(a: number, b: number): void {
     this.result = this.calculatorService.subtract(a, b);
   }
+
+  multiply(a: number, b: number): void {
+    this.result = this.calculatorService.multiply(a, b);
+  }
 }
